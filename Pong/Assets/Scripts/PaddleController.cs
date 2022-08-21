@@ -9,6 +9,7 @@ public class PaddleController : MonoBehaviour
     [SerializeField] private KeyCode downKey;
 
     private Rigidbody2D rig;
+    private Vector2 inputVector;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +17,14 @@ public class PaddleController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        inputVector = GetInput();
+    }
+
     void FixedUpdate()
     {
-        MoveObject(GetInput());
+        MoveObject(inputVector);
     }
 
     private Vector2 GetInput()
