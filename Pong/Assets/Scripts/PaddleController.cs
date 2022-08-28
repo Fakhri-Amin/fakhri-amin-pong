@@ -41,8 +41,9 @@ public class PaddleController : MonoBehaviour
         return Vector2.zero;
     }
 
-    private void MoveObject(Vector2 movement)
+    private void MoveObject(Vector2 direction)
     {
-        rig.velocity = movement * moveSpeed;
+        direction.y = Mathf.Clamp(direction.y, -3.4f, 3.4f);
+        rig.velocity = new Vector2(direction.x, direction.y).normalized * moveSpeed;
     }
 }

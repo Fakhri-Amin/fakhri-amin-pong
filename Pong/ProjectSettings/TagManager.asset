@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RightPaddle
+  - LeftPaddle
+  - Ball
+  - LeftScorePaddle
   layers:
   - Default
   - TransparentFX
@@ -38,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3035708817
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2718459625
+    locked: 0
+  - name: UI
+    uniqueID: 1295522367
     locked: 0
