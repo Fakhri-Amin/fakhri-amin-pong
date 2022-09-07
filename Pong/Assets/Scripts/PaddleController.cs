@@ -8,6 +8,9 @@ public class PaddleController : MonoBehaviour
     [SerializeField] private KeyCode upKey;
     [SerializeField] private KeyCode downKey;
 
+    [SerializeField] private float minLimit;
+    [SerializeField] private float maxLimit;
+
     private Rigidbody2D rig;
     private Vector2 inputVector;
 
@@ -20,6 +23,10 @@ public class PaddleController : MonoBehaviour
     void Update()
     {
         inputVector = GetInput();
+
+        Vector2 paddlePos = new Vector2(transform.position.x, transform.position.y);
+        paddlePos.y = Mathf.Clamp(transform.position.y, minLimit, maxLimit);
+        transform.position = paddlePos;
     }
 
     void FixedUpdate()

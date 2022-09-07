@@ -8,6 +8,8 @@ TagManager:
   - LeftPaddle
   - Ball
   - LeftScorePaddle
+  - Buff
+  - Debuff
   layers:
   - Default
   - TransparentFX
@@ -48,9 +50,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 2718459625
-    locked: 0
   - name: UI
     uniqueID: 1295522367
+    locked: 0
+  - name: Player
+    uniqueID: 2718459625
     locked: 0
