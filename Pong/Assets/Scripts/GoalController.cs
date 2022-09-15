@@ -6,13 +6,11 @@ public class GoalController : MonoBehaviour
 {
     private ScoreManager scoreManager;
     private BallController ballController;
-    private GameManager gameManager;
 
     private void Awake()
     {
         scoreManager = FindObjectOfType<ScoreManager>();
         ballController = FindObjectOfType<BallController>();
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,7 +28,7 @@ public class GoalController : MonoBehaviour
                 ballController.isLeftPaddleTurn = true;
             }
 
-            if (!gameManager.isGameEnd) StartCoroutine(ballController.LaunchBall());
+            if (!GameManager.Instance.isGameEnd) StartCoroutine(ballController.LaunchBall());
         }
     }
 }

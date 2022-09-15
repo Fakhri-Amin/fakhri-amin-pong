@@ -10,11 +10,10 @@ public class ScoreManager : MonoBehaviour
 
     private float leftScore;
     private float rightScore;
-    private GameManager gameManager;
 
     private void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>();
+
     }
 
     private void Start()
@@ -30,7 +29,7 @@ public class ScoreManager : MonoBehaviour
 
         if (leftScore >= 5)
         {
-            gameManager.DisplayLeftPlayerWinUI();
+            GameManager.Instance.DisplayLeftPlayerWinUI();
         }
     }
 
@@ -41,7 +40,7 @@ public class ScoreManager : MonoBehaviour
 
         if (rightScore >= 5)
         {
-            gameManager.DisplayRightPlayerWinUI();
+            GameManager.Instance.DisplayRightPlayerWinUI();
         }
     }
 }

@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupEffect: {fileID: 11400000, guid: 2affbe2727fd59a4a834c6ef7a0dc148, type: 2}
+  explosionVFX: {fileID: 371769157092216243, guid: df350e53ca65dcf4b80c37d8b7fcde43, type: 3}
 --- !u!1 &7672824686342178497
 GameObject:
   m_ObjectHideFlags: 0

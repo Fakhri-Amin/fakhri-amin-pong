@@ -14,19 +14,10 @@ public class PowerUpSpawner : MonoBehaviour
     [SerializeField] private float spawnAreaY;
     [SerializeField] int maxPowerUpInstanceAmount;
 
-    private GameManager gameManager;
-
 
     private void Awake()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
         Instance = this;
-
-        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Start()
@@ -36,7 +27,7 @@ public class PowerUpSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (!gameManager.isGameEnd) return;
+        if (!GameManager.Instance.isGameEnd) return;
 
         var instances = FindObjectsOfType<PowerUp>();
         foreach (PowerUp powerUp in instances)
@@ -47,7 +38,7 @@ public class PowerUpSpawner : MonoBehaviour
 
     IEnumerator SpawnPowerUp()
     {
-        while (!gameManager.isGameEnd)
+        while (!GameManager.Instance.isGameEnd)
         {
             float randomSpawnTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(randomSpawnTime);

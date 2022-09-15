@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7252270468392772968}
   - component: {fileID: 7252270468392772971}
-  - component: {fileID: 7252270468392772970}
   - component: {fileID: 7252270468392772974}
   - component: {fileID: 755050349}
+  - component: {fileID: 5907048821778115418}
   m_Layer: 0
   m_Name: Left Paddle
   m_TagString: LeftPaddle
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7252270468392772970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7252270468392772981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094e3b0c7c74f574c999764523e06c05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 12
-  upKey: 273
-  downKey: 274
 --- !u!50 &7252270468392772974
 Rigidbody2D:
   serializedVersion: 4
@@ -139,3 +124,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.56, y: 2.44}
   m_Direction: 0
+--- !u!114 &5907048821778115418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252270468392772981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d04ff3d859180b4a8e73a91ca618dc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 12
+  minLimit: -3.1
+  maxLimit: 3.1
