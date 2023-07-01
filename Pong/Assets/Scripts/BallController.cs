@@ -81,8 +81,8 @@ public class BallController : MonoBehaviour
 
     private void RestartBall()
     {
-        rig.velocity = new Vector2(0, 0);
         transform.position = new Vector2(0, 0);
+        rig.velocity = new Vector2(0, 0);
         transform.localScale = startLocalScale;
         trailRenderer.startWidth = startTrailRendererWidth;
         trailRenderer.time = startTrailRendererTime;
